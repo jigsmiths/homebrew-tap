@@ -6,25 +6,25 @@ cask "1pux2kdbx" do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/1pux2kdbx"]
   end
 
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     on_arm do
-      sha256 "21115ba5b87a1e7f1d25caf5c6edd6b4fada4b9ffa2bef425c1d80bcec54d809"
+      sha256 "ff925176f92388ae5f819df88c70175a0e445fdd7ddd4bd4a6ea4b9e875725a1"
       url "https://github.com/jigsmiths/1pux2kdbx/releases/download/v#{version}/1pux2kdbx_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "1f1f15d68f5d58c62abc66b96369877bfdbe7c4f086503917690bb2805af59ae"
+      sha256 "e147f2bdf7d3e36d0107e1e68213b86ed846fb324821fa95a72b52023a81ea2e"
       url "https://github.com/jigsmiths/1pux2kdbx/releases/download/v#{version}/1pux2kdbx_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "380d8be1fd0fa2e2476f1409a1b0e2cf8cb7e12c36871296a4d3965979fc2c3b"
+      sha256 "5438081dc60c1a583f3282036bcc37ae4074075454763ff84d19ffe7118bbcbe"
       url "https://github.com/jigsmiths/1pux2kdbx/releases/download/v#{version}/1pux2kdbx_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d686458b9e2b350532d05eed99eb9928b7f13a4577680634b45b8c2646932a77"
+      sha256 "e9f3d67d0d479649d5059fbf29b1b530971a924c959f179db6e71c1f464c0d6f"
       url "https://github.com/jigsmiths/1pux2kdbx/releases/download/v#{version}/1pux2kdbx_linux_amd64.tar.gz"
     end
   end
