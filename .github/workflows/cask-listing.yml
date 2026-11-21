@@ -13,6 +13,10 @@ permissions:
 
 concurrency: cask-listing
 
+defaults:
+  run:
+    shell: bash # -eo pipefail: a failing brew fails the job
+
 jobs:
   listing:
     runs-on: macos-latest
@@ -26,12 +30,15 @@ jobs:
           HOMEBREW_NO_ANALYTICS: "1"
         run: |
           brew tap jigsmiths/tap "$GITHUB_WORKSPACE"
+          brew trust jigsmiths/tap
           casks=$(find Casks -name '*.rb' -exec basename {} .rb \; | sort | sed 's|^|jigsmiths/tap/|')
-          mkdir -p api
+          brew info --json=v2 --variations --cask $casks > "$RUNNER_TEMP/info.json"
           # Drop what describes the runner's own install rather than the cask.
-          brew info --json=v2 --variations --cask $casks |
-            jq '.casks | map(del(.installed, .installed_time, .bundle_version, .bundle_short_version, .pinned, .pinned_version, .outdated))' \
-            > api/cask.json
+          jq '.casks | map(del(.installed, .installed_time, .bundle_version, .bundle_short_version, .pinned, .pinned_version, .outdated))' \
+            "$RUNNER_TEMP/info.json" > "$RUNNER_TEMP/cask.json"
+          jq -e --argjson n "$(echo "$casks" | wc -l)" 'length == $n' "$RUNNER_TEMP/cask.json" > /dev/null
+          mkdir -p api
+          mv "$RUNNER_TEMP/cask.json" api/cask.json
       - name: Commit it if it changed
         run: |
           git add api/cask.json
