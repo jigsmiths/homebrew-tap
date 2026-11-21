@@ -1,0 +1,45 @@
+# Writes api/cask.json, the casks in the API's format, for brw, which can't
+# read the Ruby cask files. brew generates it, so it says what brew would.
+name: Cask listing
+
+on:
+  push:
+    branches: [main]
+    paths: ["Casks/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: cask-listing
+
+jobs:
+  listing:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Generate api/cask.json
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+          HOMEBREW_NO_ANALYTICS: "1"
+        run: |
+          brew tap jigsmiths/tap "$GITHUB_WORKSPACE"
+          casks=$(find Casks -name '*.rb' -exec basename {} .rb \; | sort | sed 's|^|jigsmiths/tap/|')
+          mkdir -p api
+          # Drop what describes the runner's own install rather than the cask.
+          brew info --json=v2 --variations --cask $casks |
+            jq '.casks | map(del(.installed, .installed_time, .bundle_version, .bundle_short_version, .pinned, .pinned_version, .outdated))' \
+            > api/cask.json
+      - name: Commit it if it changed
+        run: |
+          git add api/cask.json
+          if git diff --cached --quiet; then
+            echo "api/cask.json is up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: regenerate api/cask.json"
+          git push
