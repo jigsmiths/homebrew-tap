@@ -65,7 +65,7 @@
     "disable_replacement_formula": null,
     "disable_replacement_cask": null,
     "disable_args": null,
-    "tap_git_head": "1fe8c06e0d988112cdcf741bb94869d953ae5c5c",
+    "tap_git_head": "c1bf4418f44cdcb1164ce973d63cba77c1921061",
     "languages": [],
     "ruby_source_path": "Casks/1pux2kdbx.rb",
     "ruby_source_checksum": {
@@ -138,13 +138,13 @@
     ],
     "desc": "Homebrew-compatible package client written in Go",
     "homepage": "https://github.com/jigsmiths/brw",
-    "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_arm64.tar.gz",
+    "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_arm64.tar.gz",
     "url_specs": {},
-    "version": "0.21.0",
+    "version": "0.22.0",
     "autobump": true,
     "no_autobump_message": null,
     "skip_livecheck": true,
-    "sha256": "4d25c115fdebcdde5bf85ca326cafff74a8b761da1edfb8599dd56eb7b0d5f00",
+    "sha256": "c56aa6962fc6c43c13b8d9269c552ce4cf4ce52b78a4cfa49900197d24e73f09",
     "artifacts": [
       {
         "binary": [
@@ -194,48 +194,48 @@
     "disable_replacement_formula": null,
     "disable_replacement_cask": null,
     "disable_args": null,
-    "tap_git_head": "1fe8c06e0d988112cdcf741bb94869d953ae5c5c",
+    "tap_git_head": "c1bf4418f44cdcb1164ce973d63cba77c1921061",
     "languages": [],
     "ruby_source_path": "Casks/brw.rb",
     "ruby_source_checksum": {
-      "sha256": "97de3b36c4bf12ee8aa21f288d0a6a4a04cb411814cd36d020fbf5869c7c2c02"
+      "sha256": "b805da2b31675ba1a22f5dd65119a8b60a03621f196a90810451246fb81fa759"
     },
     "variations": {
       "golden_gate": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "tahoe": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "sequoia": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "sonoma": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "ventura": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "monterey": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "big_sur": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_darwin_amd64.tar.gz",
-        "sha256": "eb8cbc08c8812e0d40ed2864f2b6003236b1d45a6aeffa9ab581b5bc65f5e083"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_darwin_amd64.tar.gz",
+        "sha256": "10bdfdce14ece04335ce6a006f61d60f181eef1aa3a8b7f4dc95c588f9156dd6"
       },
       "x86_64_linux": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_linux_amd64.tar.gz",
-        "sha256": "f31a4ee9966410478d74701bfc78ac7f32151469bc0ed84ce166970c4862667e"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_linux_amd64.tar.gz",
+        "sha256": "04c171f0cbcc9a3fdea57cf3c3720e68544a39b20f1eb8abad1d9ccb7b639f5e"
       },
       "arm64_linux": {
-        "url": "https://github.com/jigsmiths/brw/releases/download/v0.21.0/brw_linux_arm64.tar.gz",
-        "sha256": "c587d370d8898e6e4738af9cec885afc1b52d85fdb430281a7991d3918070686"
+        "url": "https://github.com/jigsmiths/brw/releases/download/v0.22.0/brw_linux_arm64.tar.gz",
+        "sha256": "724c0ffaae0210f5cf1593a665c40f722d54530d3e6eff9f51d54b8cdb0157a8"
       }
     },
     "supported_platforms": [
@@ -339,7 +339,7 @@
     "disable_replacement_formula": null,
     "disable_replacement_cask": null,
     "disable_args": null,
-    "tap_git_head": "1fe8c06e0d988112cdcf741bb94869d953ae5c5c",
+    "tap_git_head": "c1bf4418f44cdcb1164ce973d63cba77c1921061",
     "languages": [],
     "ruby_source_path": "Casks/fennec.rb",
     "ruby_source_checksum": {
@@ -437,7 +437,7 @@
     "disable_replacement_formula": null,
     "disable_replacement_cask": null,
     "disable_args": null,
-    "tap_git_head": "1fe8c06e0d988112cdcf741bb94869d953ae5c5c",
+    "tap_git_head": "c1bf4418f44cdcb1164ce973d63cba77c1921061",
     "languages": [],
     "ruby_source_path": "Casks/packrat.rb",
     "ruby_source_checksum": {
@@ -500,7 +500,7 @@
     "disable_replacement_formula": null,
     "disable_replacement_cask": null,
     "disable_args": null,
-    "tap_git_head": "1fe8c06e0d988112cdcf741bb94869d953ae5c5c",
+    "tap_git_head": "c1bf4418f44cdcb1164ce973d63cba77c1921061",
     "languages": [],
     "ruby_source_path": "Casks/pinger.rb",
     "ruby_source_checksum": {
