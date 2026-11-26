@@ -4,25 +4,25 @@ cask "brw" do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/brw"]
   end
 
-  version "0.31.3"
+  version "0.32.0"
 
   on_macos do
     on_arm do
-      sha256 "146941e06b550103d624ee333f174898effa784d0b45ac71e6cce71051451365"
+      sha256 "d6433765dfa64c9ec0abcc42fcd3d6421fb60db9cbe5f3f2eb885c2fd7fffcdc"
       url "https://github.com/jigsmiths/brw/releases/download/v#{version}/brw_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "bfe71885db50a13c40324f90a7d9d1ccdbbeca7c87f54cab0f302741224aa943"
+      sha256 "317240589aa72b3b7c63052398f24f0451916be8724edc6387f3abc29cb6c8e1"
       url "https://github.com/jigsmiths/brw/releases/download/v#{version}/brw_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "e01e3d02c84fee1a5bf53d9c7030f319100b541f1eb52797edf47d03a5ec0932"
+      sha256 "abae0c00ea56a5c30c47c5d10068de1b33a8aa8edda9e564d08fab1b03075542"
       url "https://github.com/jigsmiths/brw/releases/download/v#{version}/brw_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "038b997771953afb92cddf33b3de6a6f4642ed11e34f768c2aad1647f56645d7"
+      sha256 "321851b4d70ef7cc8a5957cef200b9aa391d365b26141b5796bc426db035eff1"
       url "https://github.com/jigsmiths/brw/releases/download/v#{version}/brw_linux_amd64.tar.gz"
     end
   end
